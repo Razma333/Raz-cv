@@ -9,15 +9,24 @@ module.exports = grunt => {
                     port: 8000,
                     hostname: '0.0.0.0',
                     open: true,
-                    base: 'app',
-                    livereload: true
+                    base: 'src',
+                    keepalive: true
+                }
+            },
+            server: {
+                options: {
+                    middleware: (connect, options, middlewares) => {
+
+                    return middlewares;    
+                    }
+                    
                 }
             }
         },
         watch: {
             less: {
-                    files: ['**/*.less', 'src/styles'],
-                    tasks: ['less']
+                files: ['**/*.less', 'src/styles'],
+                tasks: ['less']
             }
         },
         less: {
@@ -32,5 +41,5 @@ module.exports = grunt => {
         }
     });
 
-    grunt.registerTask('serve', ['connect', 'watch']);
+    grunt.registerTask('serve', ['less', 'connect', 'watch']);
 }
