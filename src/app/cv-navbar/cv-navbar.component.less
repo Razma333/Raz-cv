@@ -1,0 +1,27 @@
+.navbar.navbar-default{
+    border: none;
+    background: #304153;
+    font-size: 1.1em;
+    .container-fluid{
+        padding: 10px 15px;
+    }
+    .nav.navbar-nav{
+        li{
+            border-right: 1px solid #B4CDCD;
+            a{
+                color: #fff;
+                &:hover{
+                   color: #73B1B7;
+                }
+            }
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+         .container-fluid{
+             padding: 0 15px;
+         }
+    }
+}
