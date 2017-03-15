@@ -148,6 +148,9 @@ h6 {
   color: #fff;
   border-radius: 5px;
 }
+.navbar.navbar-default .nav.navbar-nav li .dropdown-menu li {
+  border-right: none;
+}
 .navbar.navbar-default .nav.navbar-nav li .dropdown-menu li a:hover {
   color: #304153;
 }
@@ -186,8 +189,12 @@ section {
 .container {
   background: #F9F9F9;
 }
-.main-details {
+.header-container .main-details {
   color: #304153;
+}
+.personal-details {
+  padding: 50px 0;
+  background: #fff;
 }
 .personal-details .left-row .parenthesis-img {
   height: 200px;
@@ -208,7 +215,7 @@ section {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #86E7F7, #20A4DC, #012897);
   /* Standard syntax */
-  top: 0;
+  top: 50;
   left: 100px;
   height: 5px;
   width: 90%;
@@ -226,10 +233,13 @@ section {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #86E7F7, #20A4DC, #012897);
   /* Standard syntax */
-  top: 195px;
+  top: 245px;
   left: 100px;
   height: 5px;
   width: 90%;
+}
+.knowledge-container .high-education .content-container .education-icon {
+  margin-left: 5px;
 }
 .knowledge-container .high-education .content-container:before {
   content: '';
@@ -268,13 +278,22 @@ section {
   width: 5px;
 }
 .experience {
-  background: beige;
-  border-top: 3px solid #304153;
-  border-bottom: 3px solid #304153;
+  border-width: 10px 60px 10px 0;
+  background: #304153;
   padding-bottom: 25px;
+  color: #fff;
+  border-style: solid;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 100% 0, #86E7F7, #20A4DC, #304153) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  -moz-border-image: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  -o-border-image: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  border-image: linear-gradient(to left, #86E7F7, #20A4DC, #304153) 1 100%;
 }
 .tech-knowledge .content-container ul li {
   margin-bottom: 10px;
+}
+.tech-knowledge .content-container ul li .lang-tech-name {
+  font-weight: 600;
 }
 .tech-knowledge .content-container .logo-img {
   height: 25px;
@@ -287,7 +306,7 @@ section {
   transform: scale(1.8);
   margin-right: 10px;
 }
-.tech-knowledge .content-container .dev-environment:before {
+.tech-knowledge .content-container .dev-languages ul:before {
   content: '';
   position: absolute;
   background: #20A4DC;
@@ -300,12 +319,12 @@ section {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#86E7F7, #20A4DC, #012897);
   /* Standard syntax */
-  top: 23px;
+  top: 0;
   left: 0;
-  height: 50px;
+  height: 200px;
   width: 5px;
 }
-.tech-knowledge .content-container .dev-languages:before {
+.tech-knowledge .content-container .dev-courses-tech ul:before {
   content: '';
   position: absolute;
   background: #20A4DC;
@@ -318,26 +337,8 @@ section {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#86E7F7, #20A4DC, #012897);
   /* Standard syntax */
-  top: 23px;
+  top: 0;
   left: 0;
-  height: 235px;
-  width: 5px;
-}
-.tech-knowledge .content-container .dev-courses-tech:before {
-  content: '';
-  position: absolute;
-  background: #20A4DC;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* Standard syntax */
-  top: 23px;
-  left: 0;
-  height: 370px;
+  height: 340px;
   width: 5px;
 }

@@ -19,14 +19,19 @@ section{
 .container{
     background: #F9F9F9;
 }
-.main-details{
-    color: @mainDarkBlue;
+.header-container{
+    .main-details{
+        color: @mainDarkBlue;
     .name{
     }
     .main-dev{            
     }
+  }
 }
+
 .personal-details{
+    padding: 50px 0;
+    background: #fff;
     .left-row{
         .parenthesis-img{
             height: 200px;
@@ -39,7 +44,7 @@ section{
            content: '';
            position: absolute;
            .palleteBlueCyanRight;
-           top: 0;
+           top: 50;
            left: 100px;
            height: 5px;
            width: 90%;
@@ -48,7 +53,7 @@ section{
            content: '';
            position: absolute;
            .palleteBlueCyanRight;
-           top: 195px;
+           top: 245px;
            left: 100px;
            height: 5px;
            width: 90%;
@@ -57,6 +62,9 @@ section{
 .knowledge-container{
     .high-education{
         .content-container{
+            .education-icon{
+                margin-left: 5px;
+            }
             &:before{
                 content: '';
                 position: absolute;
@@ -83,10 +91,21 @@ section{
     }
 }
 .experience{
-    background: beige;
-    border-top: 3px solid @mainDarkBlue;
-    border-bottom: 3px solid @mainDarkBlue;
+    border-width: 10px 60px 10px 0;
+    background: @mainDarkBlue;
     padding-bottom: 25px;
+    color: #fff;
+    border-style: solid;
+    -webkit-border-image: 
+      -webkit-gradient(linear, 0 0, 100% 0, #86E7F7, #20A4DC  , #304153) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(left, #86E7F7, #20A4DC  , #304153) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(left, #86E7F7, #20A4DC  , #304153) 1 100%; 
+    -o-border-image:
+      -o-linear-gradient(left, #86E7F7, #20A4DC  , #304153) 1 100%;
+    border-image:
+      linear-gradient(to left, #86E7F7, #20A4DC , #304153) 1 100%;     
 }
 .languages{
 
