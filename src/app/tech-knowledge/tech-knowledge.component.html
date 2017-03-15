@@ -1,0 +1,45 @@
+<section class="tech-knowledge col-xs-6" id="tech-knowledge">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>
+                Technological knowledge
+            </h2>
+        </div>
+        <div class="col-xs-offset-1 col-xs-11 content-container">
+            <div class="row">
+                <div class="col-xs-12 dev-environment">
+                    <h3>Development Environments:</h3>
+                    <div>
+                        .NET Framework 4.5 & Web-Development
+                    </div>
+                </div>
+                <div class="col-xs-12 dev-languages">
+                    <h3>Programming languages:</h3>
+                    <div>
+                        <ul>
+                            <li *ngFor="let lang of programmingLanguages">
+                                <span>
+                                    <img src="{{lang.logoUrl}}" class="logo-img">
+                                </span>
+                                <span>{{lang.lang}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 dev-courses-tech">
+                    <h3>Courses & Technologies</h3>
+                    <div>
+                        <ul>
+                            <li *ngFor="let tech of techAndCourses">
+                                <span>
+                                    <img src="{{tech.logoUrl}}" class="logo-img">
+                                </span>
+                                <span>{{tech.tech}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

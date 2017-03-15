@@ -1,15 +1,17 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent }  from './app.component';
-import { CvNavbarComponent }  from '../app/cv-navbar/cv-navbar.component';
+import { AppComponent } from './app.component';
+import { CvNavbarComponent } from '../app/cv-navbar/cv-navbar.component';
+import { TechKnowledgeComponent } from '../app/tech-knowledge/tech-knowledge.component';
 
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ 
+  imports: [BrowserModule],
+  declarations: [
     AppComponent,
-    CvNavbarComponent
-     ],
-  bootstrap:    [ AppComponent ]
+    CvNavbarComponent,
+    TechKnowledgeComponent
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

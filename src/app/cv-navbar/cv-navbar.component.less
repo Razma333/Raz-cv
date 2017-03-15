@@ -1,3 +1,4 @@
+@mainDarkBlue: #304153;
 .navbar.navbar-default{
     border: none;
     background: #304153;
@@ -16,6 +17,18 @@
             }
             &:last-child{
                 border-right: none;
+            }
+            .dropdown-menu{
+                background: @mainDarkBlue;
+                color: #fff;
+                border-radius: 5px;
+                li{
+                    a{
+                        &:hover{
+                            color: @mainDarkBlue;
+                        }
+                    }
+                }
             }
         }
     }
