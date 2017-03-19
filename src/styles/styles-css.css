@@ -277,18 +277,6 @@ section {
   height: 70px;
   width: 5px;
 }
-.experience {
-  border-width: 10px 60px 10px 0;
-  background: #304153;
-  padding-bottom: 25px;
-  color: #fff;
-  border-style: solid;
-  -webkit-border-image: -webkit-gradient(linear, 0 0, 100% 0, #86E7F7, #20A4DC, #304153) 1 100%;
-  -webkit-border-image: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
-  -moz-border-image: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
-  -o-border-image: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
-  border-image: linear-gradient(to left, #86E7F7, #20A4DC, #304153) 1 100%;
-}
 .tech-knowledge .content-container ul li {
   margin-bottom: 10px;
 }
@@ -341,4 +329,32 @@ section {
   left: 0;
   height: 340px;
   width: 5px;
+}
+.experience {
+  border-width: 10px 60px 10px 0;
+  background: #304153;
+  padding-bottom: 25px;
+  color: #fff;
+  border-style: solid;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 100% 0, #86E7F7, #20A4DC, #304153) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  -moz-border-image: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  -o-border-image: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  border-image: linear-gradient(to left, #86E7F7, #20A4DC, #304153) 1 100%;
+}
+.experience .content-container .work-row {
+  margin-bottom: 20px;
+  position: relative;
+}
+.experience .content-container .work-row:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 85%;
+  bottom: 0;
+  left: 0;
+  background: #0072C6;
+}
+.experience .content-container .work-row .work-header {
+  font-size: 1.6em;
 }

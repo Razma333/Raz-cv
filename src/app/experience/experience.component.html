@@ -1,0 +1,22 @@
+<section class="experience col-xs-12" id="experience">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Professional Experience</h2>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-11 content-container">
+                <div class="work-row" *ngFor="let work of works">
+                    <div class="work-header">
+                        <span> {{work.year}} </span>
+                        <span>{{work.company}}</span>
+                    </div>
+                    <div>{{work.description}}</div>
+                    <div *ngIf="work.techs">
+                        <span>Programming Languages & Techniques: </span>
+                        <span>{{work.techs}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
