@@ -1,3 +1,11 @@
+.palleteToRightCyan{
+    background: #20A4DC; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #86E7F7, #20A4DC , #304153); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #86E7F7, #20A4DC , #304153); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #86E7F7, #20A4DC , #304153); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #86E7F7 , #20A4DC , #304153); /* Standard syntax */
+}
+
 .experience{
     border-width: 10px 60px 10px 0;
     background: @mainDarkBlue;
@@ -23,9 +31,9 @@
             position: absolute;
             height: 1px;
             width: 85%;
-            bottom: -10;
+            bottom: -10px;
             left: 0;
-            background: #0072C6;
+            .palleteToRightCyan;
           }
           .work-header{
             font-size: 1.6em;

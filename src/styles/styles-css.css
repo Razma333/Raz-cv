@@ -174,13 +174,13 @@ h6 {
 .palleteBlueCyanRight {
   background: #20A4DC;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #012897);
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #012897);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #012897);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #012897);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #86E7F7, #20A4DC, #012897);
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #012897);
   /* Standard syntax */
 }
 section {
@@ -199,6 +199,16 @@ section {
 .personal-details .left-row .parenthesis-img {
   height: 200px;
 }
+.personal-details .left-row .icons-container {
+  padding-top: 10px;
+}
+.personal-details .left-row .icons-container .logo-img {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  object-fit: contain;
+  animation: firstSpin 1s linear 0.5s;
+}
 .personal-details .right-row {
   padding: 20px 0;
 }
@@ -207,13 +217,13 @@ section {
   position: absolute;
   background: #20A4DC;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #012897);
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #012897);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #012897);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #012897);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #86E7F7, #20A4DC, #012897);
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #012897);
   /* Standard syntax */
   top: 50;
   left: 100px;
@@ -225,13 +235,13 @@ section {
   position: absolute;
   background: #20A4DC;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #012897);
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #012897);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #012897);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #012897);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #86E7F7, #20A4DC, #012897);
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #012897);
   /* Standard syntax */
   top: 245px;
   left: 100px;
@@ -330,6 +340,32 @@ section {
   height: 340px;
   width: 5px;
 }
+@keyframes firstSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    margin-right: 5px;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+    margin-right: 15px;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    margin-right: 5px;
+  }
+}
+.palleteToRightCyan {
+  background: #20A4DC;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #304153);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #304153);
+  /* Standard syntax */
+}
 .experience {
   border-width: 10px 60px 10px 0;
   background: #304153;
@@ -351,9 +387,18 @@ section {
   position: absolute;
   height: 1px;
   width: 85%;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
-  background: #0072C6;
+  background: #20A4DC;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #304153);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #304153);
+  /* Standard syntax */
 }
 .experience .content-container .work-row .work-header {
   font-size: 1.6em;
