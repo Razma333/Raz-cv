@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { WindowRef } from './shared/Window';
 
 import { AppComponent } from './app.component';
-import { CvNavbarComponent } from '../app/cv-navbar/cv-navbar.component';
-import { TechKnowledgeComponent } from '../app/tech-knowledge/tech-knowledge.component';
-import { ExperienceComponent } from '../app/experience/experience.component';
+import { CvNavbarComponent } from './cv-navbar/cv-navbar.component';
+import { TechKnowledgeComponent } from './tech-knowledge/tech-knowledge.component';
+import { ExperienceComponent } from './experience/experience.component';
+
 
 @NgModule({
   imports: [BrowserModule],
@@ -14,6 +16,7 @@ import { ExperienceComponent } from '../app/experience/experience.component';
     TechKnowledgeComponent,
     ExperienceComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [WindowRef]
 })
 export class AppModule { }

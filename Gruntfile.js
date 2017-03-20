@@ -1,23 +1,22 @@
 module.exports = grunt => {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
+    var serve_static = require('serve-static');
 
     grunt.initConfig({
         connect: {
-            target: {
+            server: {
                 options: {
                     port: 8000,
                     hostname: '0.0.0.0',
                     open: true,
                     base: 'src',
-                    keepalive: true
-                }
-            },
-            server: {
-                options: {
+                    keepalive: true,
                     middleware: (connect, options, middlewares) => {
-
-                    return middlewares;    
+                        return [
+                            connect().use('/node_modules', serve_static('./node_modules')),
+                            serve_static('src')
+                        ];    
                     }
                     
                 }

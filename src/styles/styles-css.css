@@ -123,10 +123,63 @@ h5,
 h6 {
   font-weight: 600 !important;
 }
+.paletteToRightCyan {
+  background: #20A4DC;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #304153);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #304153);
+  /* Standard syntax */
+}
+.border-gradient-to-cyan {
+  border-style: solid;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 100% 0, #86E7F7, #20A4DC, #304153) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  -moz-border-image: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  -o-border-image: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153) 1 100%;
+  border-image: linear-gradient(to left, #86E7F7, #20A4DC, #304153) 1 100%;
+}
+.paletteBlueCyanDown {
+  background: #20A4DC;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#86E7F7, #20A4DC, #012897);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#86E7F7, #20A4DC, #012897);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#86E7F7, #20A4DC, #012897);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#86E7F7, #20A4DC, #012897);
+  /* Standard syntax */
+}
+.paletteBlueCyanRight {
+  background: #20A4DC;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #012897);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #012897);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #012897);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #86E7F7, #20A4DC, #012897);
+  /* Standard syntax */
+}
 .navbar.navbar-default {
   border: none;
   background: #304153;
   font-size: 1.1em;
+}
+.navbar.navbar-default.fixed {
+  position: fixed;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .navbar.navbar-default .container-fluid {
   padding: 10px 15px;
@@ -158,30 +211,6 @@ h6 {
   .navbar.navbar-default .container-fluid {
     padding: 0 15px;
   }
-}
-.palleteBlueCyanDown {
-  background: #20A4DC;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#86E7F7, #20A4DC, #012897);
-  /* Standard syntax */
-}
-.palleteBlueCyanRight {
-  background: #20A4DC;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #012897);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #012897);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #012897);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to left, #86E7F7, #20A4DC, #012897);
-  /* Standard syntax */
 }
 section {
   margin-bottom: 50px;
@@ -322,6 +351,16 @@ section {
   height: 200px;
   width: 5px;
 }
+.tech-knowledge .content-container .dev-languages ul:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: -1px;
+  height: 3px;
+  width: 7px;
+  animation: dev-languages-shine 3s linear infinite;
+}
 .tech-knowledge .content-container .dev-courses-tech ul:before {
   content: '';
   position: absolute;
@@ -340,6 +379,38 @@ section {
   height: 340px;
   width: 5px;
 }
+.tech-knowledge .content-container .dev-courses-tech ul:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: -1px;
+  height: 3px;
+  width: 7px;
+  animation: courses-techs-shine 3s linear infinite;
+}
+@keyframes courses-techs-shine {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 340px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes dev-languages-shine {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 200px;
+  }
+  100% {
+    top: 0;
+  }
+}
 @keyframes firstSpin {
   0% {
     transform: rotate(0deg) scale(1);
@@ -353,18 +424,6 @@ section {
     transform: rotate(360deg) scale(1);
     margin-right: 5px;
   }
-}
-.palleteToRightCyan {
-  background: #20A4DC;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right, #86E7F7, #20A4DC, #304153);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, #86E7F7, #20A4DC, #304153);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, #86E7F7, #20A4DC, #304153);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to left, #86E7F7, #20A4DC, #304153);
-  /* Standard syntax */
 }
 .experience {
   border-width: 10px 60px 10px 0;
