@@ -1,0 +1,86 @@
+.bomb-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.8);
+   // background: rgba(255, 255, 255, 0.6);
+    animation: background-color-change 1s linear;
+    .pics-container{
+        .pics-changer{
+            img{
+                transform: scale(0);                
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                object-fit: contain;
+                top: 210px;
+                left: 37%;
+                background-size: 100%;
+            }
+            .angular-logo{
+                animation: pic-stabbing 1s ease-out;
+            }
+            .javascript-logo{
+                animation: pic-stabbing 1s 1s ease-out;
+            }
+            .html-logo{
+                 animation: pic-stabbing 1s 2s ease-out;
+            }
+            .css-logo{
+                 animation: pic-stabbing 1s 3s ease-out;
+            }
+            .c-sharp-logo{
+                 animation: pic-stabbing 1s 4s ease-out;
+            }
+        }
+    }
+}
+@keyframes pic-stabbing{
+    0%{
+        transform: scale(1.5);
+    }
+    50%{
+        transform: scale(0.2);        
+    }
+    65%{
+        -ms-transform: translate(50px, 0x) scale(0.2); /* IE 9 */
+        -webkit-transform: translate(50px, 0) scale(0.2); /* Safari */
+        -moz-transform: translate(50px, 0) scale(0.2); /* firefox */
+        transform: translate(50px, 0) scale(0.2);
+    }
+    75%{
+        -ms-transform: translate(-100px, 0x) scale(0.2); /* IE 9 */
+        -webkit-transform: translate(-100px, 0) scale(0.2); /* Safari */
+        -moz-transform: translate(-100px, 0) scale(0.2); /* firefox */
+        transform: translate(-100px, 0) scale(0.2);  
+    }
+    85%{
+        -ms-transform: translate(50px, 0x) scale(0.2); /* IE 9 */
+        -webkit-transform: translate(50px, 0) scale(0.2); /* Safari */
+        -moz-transform: translate(50px, 0) scale(0.2); /* firefox */
+        transform: translate(50px, 0) scale(0.2);
+    }
+    90%{
+        -ms-transform: scale(0.5); /* IE 9 */
+        -webkit-transform: scale(0.5); /* Safari */
+        -moz-transform: scale(0.5); /* firefox */
+        transform: scale(0.5);
+    }
+    100%{
+        -ms-transform: scale(0.2); /* IE 9 */
+        -webkit-transform: scale(0.2); /* Safari */
+        -moz-transform: scale(0.2); /* firefox */
+        transform: scale(0.2);
+    }
+}
+@keyframes background-color-change{
+    0%{
+        background: rgba(255, 255, 255, 0.6);
+    }
+    100%{
+        background: rgba(0, 0, 0, 0.8);
+    }
+}

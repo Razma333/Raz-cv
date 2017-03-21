@@ -34,13 +34,16 @@ section{
     }
     .right-row{
         padding: 20px 0;
+        .summary{
+            padding: 0px 50px;
+        }
     }
      &:before{
            content: '';
            position: absolute;
            .paletteBlueCyanRight;
-           top: 50;
-           left: 100px;
+           top: 50px;
+           left: 8%;
            height: 5px;
            width: 90%;
         }
@@ -48,8 +51,8 @@ section{
            content: '';
            position: absolute;
            .paletteBlueCyanRight;
-           top: 245px;
-           left: 100px;
+           top: 77%px;
+           left: 8%;
            height: 5px;
            width: 90%;
         }
@@ -87,4 +90,13 @@ section{
 }
 .languages{
 
+}
+@media screen and (max-width: 768px){
+.personal-details{
+    .left-row{
+        .parenthesis-img{
+            display: none;
+        }
+    }
+  }
 }

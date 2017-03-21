@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CvNavbarComponent } from './cv-navbar/cv-navbar.component';
 import { TechKnowledgeComponent } from './tech-knowledge/tech-knowledge.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { BombComponent } from './bomb/bomb.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ExperienceComponent } from './experience/experience.component';
     AppComponent,
     CvNavbarComponent,
     TechKnowledgeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    BombComponent
   ],
   bootstrap: [AppComponent],
   providers: [WindowRef]

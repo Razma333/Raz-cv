@@ -4,12 +4,18 @@
     font-size: 1.1em;
     &.fixed{
     position: fixed;
-    width: 100%;
-    display: flex !important;
+    display: flex;
     justify-content: center;
     top: 0;
     left: 0;
     z-index: 50;
+    width: 10%;
+    height: 100%;
+    .nav.navbar-nav{
+        li{
+            border-right: none;
+        }
+      }
     }
     .container-fluid{
         padding: 10px 15px;
