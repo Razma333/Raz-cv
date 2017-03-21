@@ -9,17 +9,17 @@ import { DOCUMENT } from '@angular/platform-browser';
     animations: [
         trigger('navbarLeft', [
             state('open', style({
-                height: '100%'
+                width: '10%'
             })),
             transition('void => open', animate('1s linear', keyframes([
-                style({height: '0%', offset: 0}),
-                style({height: '25%', offset: .25}),
-                style({height: '50%', offset: .5}),
-                style({height: '75%', offset: .75}),
-                style({height: '100%', offset: 1}),
+                style({ width: '0%', offset: 0 }),
+                style({ width: '3%', offset: .25 }),
+                style({ width: '6%', offset: .5 }),
+                style({ width: '9%', offset: .75 }),
+                style({ width: '10%', offset: 1 }),
             ]))),
             transition('open => void', animate('1s linear', style({
-                height: '10%'
+                width: '1%'
             })))
         ])
     ],
@@ -28,8 +28,8 @@ import { DOCUMENT } from '@angular/platform-browser';
 
 export class CvNavbarComponent implements OnInit {
 
-    public navbarfixed: boolean = false;
-    public openNavLeft: string = 'close';
+    public btnForNavbar: boolean = false;
+    public openNavLeft: string = '';
     public isMobile: boolean;
     private window: WindowRef;
 
@@ -39,21 +39,29 @@ export class CvNavbarComponent implements OnInit {
 
     ngOnInit() {
         this.isMobile = this.window.isMobile;
-     }
+    }
+
+    openNavbar(): void{
+        if(this.openNavLeft == 'open'){
+            this.openNavLeft = '';
+        }
+        else{
+            this.openNavLeft = 'open';
+        }
+    }
 
     @HostListener("window:scroll", [])
     onWindowScroll() {
         let offset = this.document.body.scrollTop;
         if (offset > 100 && !this.isMobile) {
-            if (!this.navbarfixed) {
-                this.navbarfixed = true;
-                this.openNavLeft = 'open';
+            if (!this.btnForNavbar) {
+                this.btnForNavbar = true;
             }
         }
-        else if (this.navbarfixed && offset < 100) {
-            if (this.navbarfixed){
-                this.navbarfixed = false;
-                this.openNavLeft = 'close';
+        else if (this.btnForNavbar && offset < 100) {
+            if (this.btnForNavbar) {
+                this.btnForNavbar = false;
+                this.openNavLeft = '';
             }
         }
     }
