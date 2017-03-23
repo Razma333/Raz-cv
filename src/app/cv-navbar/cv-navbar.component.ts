@@ -21,6 +21,28 @@ import { DOCUMENT } from '@angular/platform-browser';
             transition('open => void', animate('1s linear', style({
                 width: '1%'
             })))
+        ]),
+        trigger('leftNavopen', [
+            state('open', style({
+                left: '10%'
+            })),
+            state('close', style({
+                left: '0%'
+            })),
+            transition('close => open', animate('1s linear', keyframes([
+                style({ left: '0%', offset: 0 }),
+                style({ left: '3%', offset: .25 }),
+                style({ left: '6%', offset: .5 }),
+                style({ left: '9%', offset: .75 }),
+                style({ left: '10%', offset: 1 }),
+            ]))),
+            transition('open => close', animate('1s linear', keyframes([
+                style({ left: '10%', offset: 0 }),
+                style({ left: '9%', offset: .25 }),
+                style({ left: '6%', offset: .5 }),
+                style({ left: '3%', offset: .75 }),
+                style({ left: '10%', offset: 1 }),
+            ]))),
         ])
     ],
     providers: [WindowRef]
@@ -29,7 +51,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 export class CvNavbarComponent implements OnInit {
 
     public btnForNavbar: boolean = false;
-    public openNavLeft: string = '';
+    public openNavLeft: string = 'close';
     public isMobile: boolean;
     private window: WindowRef;
 
@@ -43,7 +65,7 @@ export class CvNavbarComponent implements OnInit {
 
     openNavbar(): void{
         if(this.openNavLeft == 'open'){
-            this.openNavLeft = '';
+            this.openNavLeft = 'close';
         }
         else{
             this.openNavLeft = 'open';
@@ -61,7 +83,7 @@ export class CvNavbarComponent implements OnInit {
         else if (this.btnForNavbar && offset < 100) {
             if (this.btnForNavbar) {
                 this.btnForNavbar = false;
-                this.openNavLeft = '';
+                this.openNavLeft = 'close';
             }
         }
     }

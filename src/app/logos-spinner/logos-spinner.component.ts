@@ -23,15 +23,17 @@ export class LogosSpinnerComponent implements OnInit {
     public show: boolean = true;
     public active: string = 'active';
 
-    timerInit(): void {
-        let timer = Observable.timer(500000, 0);
-        let timerSubscribe = timer.subscribe((time) => {
+    timerInit(miliDelay: number, miliTick: number): void {
+        let timer: Observable<number> = Observable.timer(miliDelay, miliTick);
+        
+        let timerSubscribe = timer.subscribe((ticks) => {
+
             this.show = false;
             this.active = 'null';
             timerSubscribe.unsubscribe();
         });
     }
     ngOnInit() {
-        this.timerInit();
+        this.timerInit(5000000, 0);
     }
 }
