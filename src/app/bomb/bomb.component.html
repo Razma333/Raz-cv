@@ -3,6 +3,7 @@
         <div>
             <div>
                 <div class="pics-container">
+                    <div class="pics-changer" *ngIf="!bombFinish" [@closeLogosBomb]="closeLogosBomb">
                         <img class="angular-logo" src="/images/angular-logo.png">
                         <img class="javascript-logo" src="/images/javascript_logo.png">
                         <img class="html-logo" src="/images/HTML5_logo.png">
