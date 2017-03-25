@@ -13,7 +13,7 @@
                         <ul class="col-xs-offset-1 col-xs-11">
                             <li *ngFor="let tech of techAndCourses">
                                 <span>
-                                    <img src="{{tech.logoUrl}}" class="logo-img">
+                                    <img src="{{tech.logoUrl}}" class="logo-img" alt="{{tech.tech}}">
                                 </span>
                                 <span class="lang-tech-name">{{tech.tech}}</span>
                             </li>
@@ -26,7 +26,7 @@
                         <ul class="col-xs-offset-1 col-xs-11">
                             <li *ngFor="let lang of programmingLanguages">
                                 <span>
-                                    <img src="{{lang.logoUrl}}" class="logo-img">
+                                    <img src="{{lang.logoUrl}}" class="logo-img" alt="{{lang.lang}}">
                                 </span>
                                 <span class="lang-tech-name">{{lang.lang}}</span>
                             </li>

@@ -72,7 +72,7 @@ section{
                 .paletteBlueCyanDown;
                 top: 23px;
                 left: 0;
-                height: 70px;
+                height: 71%;
                 width: 5px;
           }
        }
@@ -85,7 +85,7 @@ section{
                 .paletteBlueCyanDown;
                 top: 23px;
                 left: 0;
-                height: 70px;
+                height: 71%;
                 width: 5px;
             }
         }
@@ -94,12 +94,55 @@ section{
 .languages{
 
 }
-@media screen and (max-width: 768px){
-.personal-details{
-    .left-row{
-        .parenthesis-img{
-            display: none;
+@media (max-width: 1200px){
+    .personal-details{
+        .left-row{
+            .parenthesis-img{
+                display: none;
+            }
+        }
+        &:before{
+              left: 0%;
+              width: 100%;
+        }
+        &:after{
+             left: 0%;
+             width: 100%;
         }
     }
-  }
+}
+
+@media screen and (max-width: 768px){
+    .personal-details{
+        padding: 50px 15px;
+        .left-row{
+            .parenthesis-img{
+               display: none;
+            }
+        }
+        &:before{
+              left: 5%;
+              width: 90%;
+        }
+        &:after{
+             left: 5%;
+             width: 90%;
+        }
+    }
+    .knowledge-container{
+         .high-education{
+              .content-container{
+                    &:before{
+                       height: 92%;
+                    }
+             }
+        }
+       .education{
+            .content-container{
+                   &:before{
+                       height: 92%;
+                  }
+            }
+        }
+     }
 }

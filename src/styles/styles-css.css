@@ -315,7 +315,7 @@ section {
   /* Standard syntax */
   top: 23px;
   left: 0;
-  height: 70px;
+  height: 71%;
   width: 5px;
 }
 .knowledge-container .education .content-container:before {
@@ -333,12 +333,42 @@ section {
   /* Standard syntax */
   top: 23px;
   left: 0;
-  height: 70px;
+  height: 71%;
   width: 5px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 1200px) {
   .personal-details .left-row .parenthesis-img {
     display: none;
+  }
+  .personal-details:before {
+    left: 0%;
+    width: 100%;
+  }
+  .personal-details:after {
+    left: 0%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .personal-details {
+    padding: 50px 15px;
+  }
+  .personal-details .left-row .parenthesis-img {
+    display: none;
+  }
+  .personal-details:before {
+    left: 5%;
+    width: 90%;
+  }
+  .personal-details:after {
+    left: 5%;
+    width: 90%;
+  }
+  .knowledge-container .high-education .content-container:before {
+    height: 92%;
+  }
+  .knowledge-container .education .content-container:before {
+    height: 92%;
   }
 }
 .tech-knowledge .content-container ul li {
