@@ -19,30 +19,26 @@ import { DOCUMENT } from '@angular/platform-browser';
                 style({ width: '10%', offset: 1 }),
             ]))),
             transition('open => void', animate('1s linear', style({
-                width: '1%'
+                width: '0%'
             })))
         ]),
         trigger('leftNavopen', [
             state('open', style({
-                left: '10%'
+                left: '8%'
             })),
             state('close', style({
-                left: '0%'
+                left: '-2%'
             })),
             transition('close => open', animate('1s linear', keyframes([
-                style({ left: '0%', offset: 0 }),
-                style({ left: '3%', offset: .25 }),
-                style({ left: '6%', offset: .5 }),
-                style({ left: '9%', offset: .75 }),
-                style({ left: '10%', offset: 1 }),
+                style({ left: '-2%', offset: 0 }),
+                style({ left: '1%', offset: .25 }),
+                style({ left: '4%', offset: .5 }),
+                style({ left: '7%', offset: .75 }),
+                style({ left: '8%', offset: 1 }),
             ]))),
-            transition('open => close', animate('1s linear', keyframes([
-                style({ left: '10%', offset: 0 }),
-                style({ left: '9%', offset: .25 }),
-                style({ left: '6%', offset: .5 }),
-                style({ left: '3%', offset: .75 }),
-                style({ left: '10%', offset: 1 }),
-            ]))),
+            transition('open => close', animate('1s linear', style({
+                left: '-2%'
+            }))),
         ])
     ],
     providers: [WindowRef]

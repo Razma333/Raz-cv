@@ -220,9 +220,11 @@ h6 {
   position: fixed;
   z-index: 100;
   top: calc(50% - 100px);
-  left: 0;
-  width: 50px;
-  height: 100px;
+  transform: rotate(-90deg);
+  width: auto;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 section {
   margin-bottom: 50px;
@@ -255,6 +257,9 @@ section {
 }
 .personal-details .right-row .summary {
   padding: 0px 50px;
+}
+.personal-details .right-row .summary p {
+  margin: 0;
 }
 .personal-details:before {
   content: '';

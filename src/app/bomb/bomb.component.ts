@@ -56,7 +56,6 @@ export class BombComponent implements OnInit {
     animationStarter(timeDelay: number, tickInterval: number): void {
         let timer = this.timerInit(timeDelay, tickInterval);
         let timerSubscribe = timer.subscribe((time) => {
-            console.log(time, 'seconds');
             if (time == 5) {
                 this.bombFinish = true;
                 this.closeLogosBomb = 'close';
