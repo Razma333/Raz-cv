@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'tech-knowledge',
     templateUrl: '../app/tech-knowledge/tech-knowledge.component.html',
-    styleUrls: ['../app/tech-knowledge/tech-knowledge.less', '../app/tech-knowledge/logos-animations.less']
+    styleUrls: ['../app/tech-knowledge/tech-knowledge.less']
 })
 
 export class TechKnowledgeComponent{

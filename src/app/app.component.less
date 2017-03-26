@@ -7,10 +7,6 @@ section{
 .header-container{
     .main-details{
         color: @mainDarkBlue;
-    .name{
-    }
-    .main-dev{            
-    }
   }
 }
 
@@ -19,7 +15,7 @@ section{
     background: #fff;
     .left-row{
         .parenthesis-img{
-            height: 200px;
+            height: 220px;
         }
         .icons-container{
             padding-top: 10px;
@@ -91,9 +87,6 @@ section{
         }
     }
 }
-.languages{
-
-}
 @media (max-width: 1200px){
     .personal-details{
         .left-row{
@@ -113,11 +106,19 @@ section{
 }
 
 @media screen and (max-width: 768px){
+    h2{
+        font-size: 2em;
+    }
     .personal-details{
         padding: 50px 15px;
         .left-row{
             .parenthesis-img{
                display: none;
+            }
+        }
+        .right-row{
+            .summary{
+               padding: 0px 30px;
             }
         }
         &:before{
@@ -133,14 +134,14 @@ section{
          .high-education{
               .content-container{
                     &:before{
-                       height: 92%;
+                       height: 80%;
                     }
              }
         }
        .education{
             .content-container{
                    &:before{
-                       height: 92%;
+                       height: 80%;
                   }
             }
         }
