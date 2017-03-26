@@ -176,11 +176,10 @@ h6 {
   position: fixed;
   display: flex;
   justify-content: center;
-  top: 0;
+  height: auto;
   left: 0;
   z-index: 50;
-  width: 10%;
-  height: 100%;
+  width: 100%;
 }
 .navbar.navbar-default.fixed .nav.navbar-nav li {
   border-right: none;
@@ -219,12 +218,14 @@ h6 {
 .btnForNavbar {
   position: fixed;
   z-index: 100;
-  top: calc(50% - 100px);
-  transform: rotate(-90deg);
-  width: auto;
-  height: auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  left: calc(50% - 50px);
+  background-image: url(/images/navigation-btn.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 75px;
+  height: 75px;
+  border: none;
+  box-shadow: 0px 2px 3px;
 }
 section {
   margin-bottom: 50px;

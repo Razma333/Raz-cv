@@ -45,7 +45,6 @@
 </nav>
 
 <div>
-    <button class="btnForNavbar" *ngIf="btnForNavbar && !isMobile" [@leftNavopen]="openNavLeft" (click)="openNavbar()">Navigation</button>
     <nav class="navbar navbar-default fixed" *ngIf="!isMobile && openNavLeft == 'open'" [@navbarLeft]="openNavLeft">
         <div class="container-fluid">
             <!-- pic and toggle get grouped for better mobile display -->
@@ -91,4 +90,5 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <button class="btnForNavbar" *ngIf="btnForNavbar && !isMobile" [@leftNavopen]="openNavLeft" (click)="openNavbar()"></button>
 </div>

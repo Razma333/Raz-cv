@@ -9,36 +9,33 @@ import { DOCUMENT } from '@angular/platform-browser';
     animations: [
         trigger('navbarLeft', [
             state('open', style({
-                width: '10%'
+                top: '0'
             })),
             transition('void => open', animate('1s linear', keyframes([
-                style({ width: '0%', offset: 0 }),
-                style({ width: '3%', offset: .25 }),
-                style({ width: '6%', offset: .5 }),
-                style({ width: '9%', offset: .75 }),
-                style({ width: '10%', offset: 1 }),
+                style({ top: '-70px', offset: 0 }),
+                style({ top: '0', offset: 1 })
             ]))),
             transition('open => void', animate('1s linear', style({
-                width: '0%'
+                top: '-70px'
             })))
         ]),
         trigger('leftNavopen', [
             state('open', style({
-                left: '8%'
+                top: '70px'
             })),
             state('close', style({
-                left: '-2%'
+                top: '0px'
             })),
-            transition('close => open', animate('1s linear', keyframes([
-                style({ left: '-2%', offset: 0 }),
-                style({ left: '1%', offset: .25 }),
-                style({ left: '4%', offset: .5 }),
-                style({ left: '7%', offset: .75 }),
-                style({ left: '8%', offset: 1 }),
-            ]))),
-            transition('open => close', animate('1s linear', style({
-                left: '-2%'
+            transition('close => open', animate('1s linear', style({
+                top: '70px'
             }))),
+            transition('open => close', animate('1s linear', style({
+                top: '0px'
+            }))),
+            transition('void => open', animate('1s linear', keyframes([
+                style({ top: '0', offset: 0 }),
+                style({ top: '70px', offset: 1 })
+            ])))
         ])
     ],
     providers: [WindowRef]
@@ -59,11 +56,11 @@ export class CvNavbarComponent implements OnInit {
         this.isMobile = this.window.isMobile;
     }
 
-    openNavbar(): void{
-        if(this.openNavLeft == 'open'){
+    openNavbar(): void {
+        if (this.openNavLeft == 'open') {
             this.openNavLeft = 'close';
         }
-        else{
+        else {
             this.openNavLeft = 'open';
         }
     }
