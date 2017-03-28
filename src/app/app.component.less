@@ -32,8 +32,18 @@ section{
         padding: 20px 0;
         .summary{
             padding: 0px 50px;
+            font-weight: 600;
             p{
                 margin: 0;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 25px;
+                width: 5px;
+                height: 97%;
+                .palleteWhiteBlackDown;
             }
         }
     }
@@ -118,7 +128,10 @@ section{
         }
         .right-row{
             .summary{
-               padding: 0px 30px;
+               padding: 0px 15px;
+                &:before{
+                content: none;
+                }
             }
         }
         &:before{

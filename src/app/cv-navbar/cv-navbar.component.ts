@@ -19,7 +19,7 @@ import { DOCUMENT } from '@angular/platform-browser';
                 top: '-70px'
             })))
         ]),
-        trigger('leftNavopen', [
+        trigger('fixedNavOpen', [
             state('open', style({
                 top: '70px'
             })),
@@ -32,9 +32,13 @@ import { DOCUMENT } from '@angular/platform-browser';
             transition('open => close', animate('1s linear', style({
                 top: '0px'
             }))),
-            transition('void => open', animate('1s linear', keyframes([
-                style({ top: '0', offset: 0 }),
-                style({ top: '70px', offset: 1 })
+            transition('void => close', animate('1s linear', keyframes([
+                style({ top: '-70px', offset: 0 }),
+                style({ top: '0px', offset: 1 })
+            ]))),
+            transition('close => void', animate('1s linear', keyframes([
+                style({ top: '0px', offset: 0 }),
+                style({ top: '-70px', offset: 1 })
             ])))
         ])
     ],

@@ -90,5 +90,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <button class="btnForNavbar" *ngIf="btnForNavbar && !isMobile" [@leftNavopen]="openNavLeft" (click)="openNavbar()"></button>
+    <button class="btnForNavbar" *ngIf="btnForNavbar && !isMobile" [@fixedNavOpen]="openNavLeft" (click)="openNavbar()">
+        <span class="glyphicon glyphicon-chevron-down" [@ngClass]="{'open': openNavLeft == 'open'}"></span>
+    </button>
 </div>

@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { CvNavbarComponent } from './cv-navbar/cv-navbar.component';
 import { TechKnowledgeComponent } from './tech-knowledge/tech-knowledge.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { BombComponent } from './bomb/bomb.component';
-import { LogosSpinnerComponent} from './logos-spinner/logos-spinner.component';
-
+import { BombComponent } from './effects/bomb/bomb.component';
+import { LogosSpinnerComponent } from './effects/logos-spinner/logos-spinner.component';
+import { ArrowFloatingComponent } from './effects/arrow-floating/arrow-floating.component';
+import { ArrowFloatingDirective } from './effects/arrow-floating/directive/arrow-floating.directive';
 
 @NgModule({
   imports: [BrowserModule],
@@ -18,7 +19,9 @@ import { LogosSpinnerComponent} from './logos-spinner/logos-spinner.component';
     TechKnowledgeComponent,
     ExperienceComponent,
     BombComponent,
-    LogosSpinnerComponent
+    LogosSpinnerComponent,
+    ArrowFloatingComponent,
+    ArrowFloatingDirective
   ],
   bootstrap: [AppComponent],
   providers: [WindowRef]
