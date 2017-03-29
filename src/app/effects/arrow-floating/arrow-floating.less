@@ -4,24 +4,29 @@
     position: absolute;
     top: 0;
     left: 0;
-    .arrow-container{
-        position: relative;
-        top: 0;
-        left: 0;
-        width: auto;
-        &.up{
-            animation: 2s to-up linear infinite; 
-        }
-        &.right{
-            animation: 2s to-right linear infinite; 
-        }
-        &.down{
-            animation: 2s to-down linear infinite; 
-        }
-        &.left{
-            animation: 2s to-left linear infinite; 
+    .arrow-content{
+        height: 100%;
+        width: 100%;
+        .arrow-container{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: auto;
+            &.up{
+                animation: 2s to-up linear infinite; 
+            }
+            &.right{
+                animation: 2s to-right linear infinite; 
+            }
+            &.down{
+                animation: 2s to-down linear infinite; 
+            }
+            &.left{
+                animation: 2s to-left linear infinite; 
+            }
         }
     }
+    
     .arrow{
         width: 100px;
         height: 50px;
@@ -37,7 +42,7 @@
         top: 50%;
     }
     50%{
-        top: -50%;
+        top: 0%;
     }
     100%{
         top: 50%;
@@ -45,34 +50,34 @@
 }
 @keyframes to-right{
     0%{
-        left: -50%;
+        left: 0%;
     }
     50%{
         left: 50%;
     }
     100%{
-        left: -50%;
+        left: 0%;
     }
 }
 @keyframes to-down{
     0%{
-        top: 50%;
+        top: 0%;
     }
     50%{
-        top: -50%;
+        top: 50%;
     }
     100%{
-        top: 50%;
+        top: 0%;
     }
 }
 @keyframes to-left{
     0%{
-        left: -50%;
-    }
-    50%{
         left: 50%;
     }
+    50%{
+        left: 0%;
+    }
     100%{
-        left: -50%;
+        left: 50%;
     }
 }

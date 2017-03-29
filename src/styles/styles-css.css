@@ -571,6 +571,17 @@ section {
 .experience .content-container .work-row .work-header {
   font-size: 1.6em;
 }
+.experience .arrow-floating {
+  left: 65% !important;
+}
+.experience .arrow-floating .arrow-container {
+  top: 25% !important;
+}
+@media (max-width: 1200px) {
+  .arrow-floating {
+    display: none;
+  }
+}
 @keyframes white-ball-shine {
   0% {
     transform: rotate(0deg);
@@ -1099,22 +1110,26 @@ section {
   top: 0;
   left: 0;
 }
-.arrow-floating .arrow-container {
+.arrow-floating .arrow-content {
+  height: 100%;
+  width: 100%;
+}
+.arrow-floating .arrow-content .arrow-container {
   position: relative;
   top: 0;
   left: 0;
   width: auto;
 }
-.arrow-floating .arrow-container.up {
+.arrow-floating .arrow-content .arrow-container.up {
   animation: 2s to-up linear infinite;
 }
-.arrow-floating .arrow-container.right {
+.arrow-floating .arrow-content .arrow-container.right {
   animation: 2s to-right linear infinite;
 }
-.arrow-floating .arrow-container.down {
+.arrow-floating .arrow-content .arrow-container.down {
   animation: 2s to-down linear infinite;
 }
-.arrow-floating .arrow-container.left {
+.arrow-floating .arrow-content .arrow-container.left {
   animation: 2s to-left linear infinite;
 }
 .arrow-floating .arrow {
@@ -1128,7 +1143,7 @@ section {
     top: 50%;
   }
   50% {
-    top: -50%;
+    top: 0%;
   }
   100% {
     top: 50%;
@@ -1136,34 +1151,34 @@ section {
 }
 @keyframes to-right {
   0% {
-    left: -50%;
+    left: 0%;
   }
   50% {
     left: 50%;
   }
   100% {
-    left: -50%;
+    left: 0%;
   }
 }
 @keyframes to-down {
   0% {
-    top: 50%;
+    top: 0%;
   }
   50% {
-    top: -50%;
+    top: 50%;
   }
   100% {
-    top: 50%;
+    top: 0%;
   }
 }
 @keyframes to-left {
   0% {
-    left: -50%;
-  }
-  50% {
     left: 50%;
   }
+  50% {
+    left: 0%;
+  }
   100% {
-    left: -50%;
+    left: 50%;
   }
 }
