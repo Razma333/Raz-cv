@@ -254,6 +254,8 @@ section {
 }
 .container {
   background: #F9F9F9;
+  background: lightskyblue;
+  background: silver;
 }
 .header-container .main-details {
   color: #304153;
@@ -261,6 +263,7 @@ section {
 .personal-details {
   padding: 50px 0;
   background: #fff;
+  background: #f9f9f9;
 }
 .personal-details .left-row .parenthesis-img {
   height: 220px;

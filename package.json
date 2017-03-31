@@ -25,7 +25,6 @@
     "angular-in-memory-web-api": "~0.2.4",
     "bootstrap": "3.3.7",
     "core-js": "^2.4.1",
-    "grunt-contrib-connect": "^1.0.2",
     "jquery": "3.1.1",
     "rxjs": "5.0.1",
     "serve-static": "^1.12.1",
@@ -46,7 +45,10 @@
     "grunt-contrib-connect": "~1.0.2",
     "time-grunt": "~1.4.0",
     "grunt-contrib-less": "~1.4.1",
-    "grunt-contrib-watch": "~1.0.0"
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-ts": "~5.5.1",
+    "grunt-contrib-uglify": "~2.2.0",
+    "grunt-contrib-concat": "~1.0.1"
   },
   "repository": {}
 }

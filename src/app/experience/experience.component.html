@@ -12,15 +12,14 @@
                     </div>
                     <div>{{work.description}}</div>
                     <div *ngIf="work.techs">
-                        <span>Programming Languages & Techniques: </span>
-                        <span>{{work.techs}}</span>
+                        <span>Programming Languages & Technologies: </span>
+                        <span *ngFor="let tech of work.techs; let _last = last">
+                            <span>{{tech}}</span>
+                            <span *ngIf="!_last">,&nbsp;</span>
+                        </span>
                     </div>
-                    <arrow-floating *ngIf="_index == 0"  
-                         imageUrl="/images/arrow.png"
-                         floatingDirection="left" 
-                         spaceWidth="20%" 
-                         spaceHeight="100%">
-                   </arrow-floating>
+                    <arrow-floating *ngIf="_index == 0" imageUrl="/images/arrow.png" floatingDirection="left" spaceWidth="20%" spaceHeight="100%">
+                    </arrow-floating>
                 </div>
             </div>
         </div>
