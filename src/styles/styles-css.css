@@ -211,13 +211,19 @@ h6 {
   color: #73B1B7;
 }
 .navbar.navbar-default .nav.navbar-nav li a.cv {
-  color: deepskyblue;
   color: gold;
-  color: goldenrod;
-  color: paleturquoise;
 }
 .navbar.navbar-default .nav.navbar-nav li a.cv:hover {
+  color: goldenrod;
+}
+.navbar.navbar-default .nav.navbar-nav li.open a {
   color: #73B1B7;
+}
+.navbar.navbar-default .nav.navbar-nav li.open a.cv {
+  color: goldenrod;
+}
+.navbar.navbar-default .nav.navbar-nav li.open li a {
+  color: #fff;
 }
 .navbar.navbar-default .nav.navbar-nav li:last-child {
   border-right: none;

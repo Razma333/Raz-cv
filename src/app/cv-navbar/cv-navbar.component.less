@@ -32,14 +32,25 @@
                    color: #73B1B7;
                 }
                 &.cv{
-                    color: deepskyblue;
                     color: gold;
-                    color: goldenrod;
-                    color: paleturquoise;
                     &:hover{
-                        color: #73B1B7;
+                        color: goldenrod;
                     }
                }
+            }
+            &.open{
+                a{
+                    color: #73B1B7;
+                    &.cv{
+                        color: goldenrod;
+                    }
+                }
+                li{
+                    a{
+                        color: #fff
+                    }
+                }
+                    
             }
             &:last-child{
                 border-right: none;
