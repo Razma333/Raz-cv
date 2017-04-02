@@ -210,6 +210,15 @@ h6 {
 .navbar.navbar-default .nav.navbar-nav li a:hover {
   color: #73B1B7;
 }
+.navbar.navbar-default .nav.navbar-nav li a.cv {
+  color: deepskyblue;
+  color: gold;
+  color: goldenrod;
+  color: paleturquoise;
+}
+.navbar.navbar-default .nav.navbar-nav li a.cv:hover {
+  color: #73B1B7;
+}
 .navbar.navbar-default .nav.navbar-nav li:last-child {
   border-right: none;
 }
@@ -253,17 +262,14 @@ section {
   margin-bottom: 50px;
 }
 .container {
-  background: #F9F9F9;
-  background: lightskyblue;
-  background: silver;
+  background: #FFF;
 }
 .header-container .main-details {
   color: #304153;
 }
 .personal-details {
-  padding: 50px 0;
+  padding: 0;
   background: #fff;
-  background: #f9f9f9;
 }
 .personal-details .left-row .parenthesis-img {
   height: 220px;
@@ -317,7 +323,7 @@ section {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to left, #86E7F7, #20A4DC, #012897);
   /* Standard syntax */
-  top: 50px;
+  top: 0;
   left: 8%;
   height: 5px;
   width: 90%;
@@ -397,7 +403,7 @@ section {
     font-size: 2em;
   }
   .personal-details {
-    padding: 50px 15px;
+    padding: 0px 15px;
   }
   .personal-details .left-row .parenthesis-img {
     display: none;

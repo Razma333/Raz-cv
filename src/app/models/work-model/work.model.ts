@@ -1,4 +1,4 @@
-export class WorkModel{
+export class WorkModel {
     year: string;
     company: string;
     description: string;
