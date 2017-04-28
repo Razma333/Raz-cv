@@ -1,0 +1,39 @@
+<section class="tech-knowledge col-xs-12" id="tech-knowledge">
+<div class="row">
+<div class="col-xs-12">
+<h2>
+Technological knowledge
+</h2>
+</div>
+<div class="col-xs-12 col-sm-offset-1 col-sm-11 content-container">
+<div class="row">
+<div class="col-xs-6 dev-courses-tech">
+<h3>Courses & Technologies:</h3>
+<div class="row">
+<ul class="col-xs-offset-1 col-xs-11">
+<li *ngFor="let tech of techAndCourses">
+<span>
+<img src="{{tech.logoUrl}}" class="logo-img" alt="{{tech.tech}}">
+</span>
+<span class="lang-tech-name">{{tech.tech}}</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xs-6 dev-languages">
+<h3>Programming languages:</h3>
+<div class="rowy">
+<ul class="col-xs-offset-1 col-xs-11">
+<li *ngFor="let lang of programmingLanguages">
+<span>
+<img src="{{lang.logoUrl}}" class="logo-img" alt="{{lang.lang}}">
+</span>
+<span class="lang-tech-name">{{lang.lang}}</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>

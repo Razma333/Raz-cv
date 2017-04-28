@@ -1,0 +1,13 @@
+<div class="arrow-floating" arrow-floating-style containerWidth="{{spaceWidth}}" containerHeight="{{spaceHeight}}">
+    <div *ngIf="moveText == 'false' || moveText == undefined" class="row arrow-content">
+        <span *ngIf="message" class="message col-xs-12 text-center">{{message}}</span>
+        <span class="arrow-container col-xs-12" [ngClass]="animationDirection">
+               <img src="{{imageUrl}}" class="arrow">
+        </span>
+    </div>
+
+    <div class="arrow-container" *ngIf="moveText == 'true'" [ngClass]="animationDirection">
+        <img src="{{imageUrl}}" class="arrow">
+        <span class="message">{{message}}</span>
+    </div>
+</div>

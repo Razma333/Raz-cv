@@ -1,0 +1,27 @@
+<section class="experience col-xs-12" id="experience">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Professional Experience</h2>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-11 content-container">
+                <div class="work-row" *ngFor="let work of works; let _index = index">
+                    <div class="work-header">
+                        <span> {{work.year}} </span>
+                        <span>{{work.company}}</span>
+                    </div>
+                    <div>{{work.description}}</div>
+                    <div *ngIf="work.techs">
+                        <span>Programming Languages & Technologies: </span>
+                        <span *ngFor="let tech of work.techs; let _last = last">
+                            <span>{{tech}}</span>
+                            <span *ngIf="!_last">,&nbsp;</span>
+                        </span>
+                    </div>
+                    <arrow-floating *ngIf="_index == 0" imageUrl="/images/arrow.png" floatingDirection="left" spaceWidth="20%" spaceHeight="100%">
+                    </arrow-floating>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

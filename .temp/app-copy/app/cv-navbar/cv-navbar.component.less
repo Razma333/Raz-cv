@@ -1,0 +1,98 @@
+.navbar.navbar-default{
+    border: none;
+    background: #304153;
+    font-size: 1.1em;
+    &.fixed{
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: auto;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    .nav.navbar-nav{
+        li{
+            border-right: none;
+        }
+      }
+    }
+    .container-fluid{
+        padding: 10px 15px;
+    }
+    .nav.navbar-nav{
+        li{
+            border-right: 1px solid #B4CDCD;
+            a{
+                color: #fff;
+                &:hover{
+                   color: #73B1B7;
+                }
+                &.cv{
+                    color: gold;
+                    &:hover{
+                        color: goldenrod;
+                    }
+               }
+            }
+            &.open{
+                a{
+                    color: #73B1B7;
+                    &.cv{
+                        color: goldenrod;
+                    }
+                }
+                li{
+                    a{
+                        color: #fff
+                    }
+                }
+                    
+            }
+            &:last-child{
+                border-right: none;
+            }
+            .dropdown-menu{
+                background: @mainDarkBlue;
+                color: #fff;
+                border-radius: 5px;
+                li{
+                    border-right: none;
+                    a{
+                        &:hover{
+                            color: @mainDarkBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+         .container-fluid{
+             padding: 0 15px;
+         }
+    }
+}
+.btnForNavbar{
+    position: fixed;
+    z-index: 100;
+    left: ~'calc(50% - 50px)';
+    background-image: url(/images/navigation-btn.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    width: 50px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 2px 3px;
+    span{
+        color: #fff;
+        top: 3px;
+        transition: all 1s linear;
+        &.open{
+             transform: rotate(-180deg) translate(2px);
+        }
+    }
+}

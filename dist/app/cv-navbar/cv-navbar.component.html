@@ -1,0 +1,113 @@
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="#personal-details">Personal Information<span class="sr-only">(current)</span></a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Education
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li><a href="#education">High school</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="#high-education">Professional Education</a></li>
+</ul>
+</li>
+<li><a href="#tech-knowledge">Technological knowledge</a></li>
+<li><a href="#experience">Professional Experience</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Miscellaneous
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li><a href="#military">Military service</a></li>
+<li><a href="#languages">Languages</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle cv" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Download CV's
+<span class="caret cv"></span>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="/cv/Raz Mantzur CV.docx" target="_self" download="Raz Mantzur CV.docx">English CV</a>
+</li>
+<li>
+<a href="/cv/Raz Mantzur Heb-CV.docx" target="_self" download="Raz Mantzur Heb-CV.docx">Hebrew CV</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div>
+<nav class="navbar navbar-default fixed" *ngIf="!isMobile && openNavLeft == 'open'" [@navbarLeft]="openNavLeft">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-left-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse" id="navbar-left-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="#personal-details">Personal Information<span class="sr-only">(current)</span></a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Education
+<span class="caret"> </span>
+</a>
+<ul class="dropdown-menu">
+<li><a href="#education">High school</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="#high-education">Professional Education</a></li>
+</ul>
+</li>
+<li><a href="#tech-knowledge">Technological knowledge</a></li>
+<li><a href="#experience">Professional Experience</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Miscellaneous
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li><a href="#military">Military service</a></li>
+<li><a href="#languages">Languages</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle cv" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Download CV's
+<span class="caret cv"></span>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="/cv/Raz Mantzur CV.docx" target="_self" download="Raz Mantzur CV.docx">English CV</a>
+</li>
+<li>
+<a href="/cv/Raz Mantzur Heb-CV.docx" target="_self" download="Raz Mantzur Heb-CV.docx">Hebrew CV</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<button class="btnForNavbar" *ngIf="btnForNavbar && !isMobile" [@fixedNavOpen]="openNavLeft" (click)="openNavbar()">
+<span class="glyphicon glyphicon-chevron-down" [@ngClass]="{'open': openNavLeft == 'open'}"></span>
+</button>
+</div>

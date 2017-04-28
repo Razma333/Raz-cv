@@ -1,0 +1,54 @@
+.experience{
+    border-width: 10px 60px 10px 0;
+    background: @mainDarkBlue;
+    padding-bottom: 25px;
+    color: #fff;
+    .border-gradient-to-cyan;
+      .content-container{
+        .work-row{
+          margin-bottom: 20px;
+          position: relative; 
+           &:before{
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 1px;
+            bottom: -12px;
+            left: 85%;
+            background: white;
+            animation: white-ball-shine 1s 1s ease-in-out infinite;
+          }         
+          &:after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 85%;
+            bottom: -10px;
+            left: 0;
+            .paletteToRightCyan;
+          }
+          .work-header{
+            font-size: 1.6em;
+          }
+      }  
+    }
+    .arrow-floating{
+      left: 65% !important;
+      .arrow-container{
+        top: 25% !important;
+      }
+    }
+}
+@media (max-width: 1200px){
+  .arrow-floating{
+    display: none;
+  }
+}
+@keyframes white-ball-shine{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
